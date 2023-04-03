@@ -1,6 +1,7 @@
 /* Golbal Variables */
 :root {
     --main-color:#1fabd2;
+    --tarnsparent-color:rgb(15 116 143/70%);
 }
 /* Globel Rules */
 * {
@@ -121,6 +122,7 @@ header .container nav ul a {
         left: 0;
         width: 100%;
         padding: 15px;
+        background-color: #2a2a2a61;
      }
      header .container nav .toggle-menu:hover + ul a {
         padding: 15px;
@@ -146,3 +148,97 @@ header .container nav .form i {
     transform: translateY(-50%);
     padding-left: 10px;
 }
+/* start landing */
+.landing {
+    min-height: 100vh;
+    background-image: url("../images/landing.jpg");
+    background-size: cover;
+    background-color: var(--main-color);
+}
+.landing .overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.488);
+}
+.landing .text {
+    position: absolute;
+    background-color: var(--tarnsparent-color);
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    padding: 50px;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+}
+.landing .text .content {
+    max-width: 500px;
+}
+@media (max-width:767px) {
+    .landing .text {
+        width: 100%;
+    }
+    .landing .text .content {
+        max-width: 100%;
+    }
+}
+.landing .text .content h2 {
+    font-size: 30px;
+    font-weight: normal;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+.landing .text .content p {
+    font-size: 15px;
+    line-height: 1.7;
+}
+@media (max-width:767px) {
+    .landing .text .content h2 {
+        font-size: 20px;
+    }
+    .landing .text .content p {
+        font-size: 12px;
+    }
+}
+.landing i {
+    position: absolute;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: white;
+}
+@media (max-width:1220px) {
+    .landing i {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
+.landing .fa-angles-right {
+    right: 30px;
+}
+.landing .fa-angles-left {
+    left: 30px;
+}
+.landing .bullets {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+    display: flex;
+}
+.landing .bullets li {
+    width: 15px;
+    height: 15px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin-left: 10px;  
+}
+.landing .bullets li.active {
+    border-color: var(--main-color);
+    background-color: var(--main-color);  
+}
+/* end landing */
