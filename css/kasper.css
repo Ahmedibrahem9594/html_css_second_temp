@@ -613,3 +613,120 @@ header .container nav .form i {
 
 
 /* end statistics */
+/* start skills */
+.our-skills {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+.our-skills .testimonials {
+    position: relative;
+}
+.our-skills .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+@media (min-width:992px) {
+  .our-skills .container > div {
+   flex-basis: 45%;
+} 
+    .our-skills .container {
+    align-items: center;
+    }
+}
+.our-skills .container > div > h2{
+    font-weight: normal;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    text-align: center
+}
+.our-skills .container > div > p{
+    line-height: 2;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #777;   
+}
+.our-skills .container .box{
+    display: flex;
+    align-items: flex-start;
+}
+.our-skills .container .box img{
+    width: 80px;
+    margin-right: 20px;
+}
+.our-skills .container .box .text{
+     line-height: 2;
+}
+.our-skills .container .box .text p{
+    text-align: right;
+    color: #7777;
+    font-weight: 600;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+@media (max-width:767px) {
+.our-skills .container .box {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+.our-skills .container .box img{
+    margin-bottom: 20px;
+}
+}
+.our-skills .container .testimonials .bullets {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+.our-skills .container .testimonials .bullets li {
+    width: 15px;
+    height: 15px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 50%;
+    margin-left: 10px;  
+}
+.our-skills .container .testimonials li.active {
+    border-color: var(--main-color);
+    background-color: var(--main-color);  
+}
+.skills .prog-holder {
+    margin-bottom: 40px;
+}
+.skills .prog-holder h4 {
+    font-size: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+.skills .prog-holder .prog {
+    width: 100%;
+    height: 25px;
+    background-color: #ccc;
+}
+.skills .prog-holder .prog span {
+    background-color: var(--main-color);
+    height: 25px;
+    display: block;
+    position: relative;
+}
+.skills .prog-holder .prog span::before {
+    content: attr(data-progress);
+    background: black;
+    color: white;
+    padding: 3px;
+    right: -20px;
+    top: -32px;
+    position: absolute;
+    border-radius: 4px;
+}
+.skills .prog-holder .prog span::after {
+    content: "";
+    position: absolute;
+    border-width: 10px;
+    border-color: black transparent transparent transparent;
+    right: -9px;
+    top: -10px;
+    border-style: solid;
+}
+/* end skills */
