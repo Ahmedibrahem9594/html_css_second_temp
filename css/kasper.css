@@ -330,3 +330,82 @@ header .container nav .form i {
 }
 
 /* end services */
+/* start Desgin */
+.desgin-container {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+    height: 600px;
+    width: 100%;
+    position: relative;
+    background-image: url("..\\images\\design.png");
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+.desgin-container::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.698);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.desgin-container .image ,
+.desgin-container .text{
+    z-index: 2;
+    position: relative;
+    flex: 1;
+
+}
+.desgin-container .image {
+    text-align: center;
+}
+.desgin-container .image img {
+    position: relative;
+    height: 800px;
+    top: 92px;
+}
+
+@media (max-width:1305px){
+    .desgin-container .image {
+        display: none;
+    }
+    .desgin-container .text {
+        width: 100%;
+    }
+}
+.desgin-container .text {
+    background-color: var(--tarnsparent-color);
+    color: white;
+    padding: 30px;
+}
+.desgin-container .text h2 {
+    text-transform: uppercase;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+.desgin-container .text ul {
+    font-size: 20px;
+    font-weight: 300;
+    padding-left: 50px;
+}
+.desgin-container .text ul li {
+    padding-bottom: 15px;
+}
+.desgin-container .text ul li::before {
+    font-family: 'Font Awesome\ 5 Free';
+    content: "\e163";
+    font-weight: 800;
+    font-size: 20px;
+    padding-right: 10px;
+    position: absolute;
+    left: 50px;
+    transform: translateY(8%);
+}
+
+
+
+/* End Desgin */
