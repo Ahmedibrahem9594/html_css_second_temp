@@ -407,7 +407,79 @@ header .container nav .form i {
     left: 50px;
     transform: translateY(8%);
 }
-
-
-
 /* End Desgin */
+/* start portfolio */
+.portfolio {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+}
+.portfolio .shuffle {
+  display: flex;
+  justify-content: center;
+}
+.portfolio .shuffle li{
+    padding: 20px;
+    text-transform: uppercase;
+}
+.portfolio .shuffle .active{
+    background-color: var(--main-color);
+    color: white;
+}
+.portfolio .images-container{
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+
+}
+.portfolio .images-container .box{
+    position: relative;
+    overflow: hidden;
+}
+@media (min-width:992px) {
+    .portfolio .images-container .box {
+        flex-basis: 50%;
+    }
+    
+}
+@media (min-width:1200px) {
+    .portfolio .images-container .box {
+        flex-basis: 25%;
+    } 
+}
+.portfolio .images-container .box img{
+    width: 100%;
+    transition: 0.3s;
+}
+.portfolio .images-container .box .caption{
+    position: absolute;
+    bottom: -100%;
+    transition: 0.3s;
+    background-color: white;
+    width: 100%;
+    padding: 10px;
+}
+.portfolio .images-container .box:hover .caption{
+    bottom: 0;
+}
+.portfolio .images-container .box:hover img{
+   transform: rotate(3deg) scale(1.1);
+}
+.portfolio .images-container .box .caption h3{
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.portfolio .images-container .box .caption p{
+    color: var(--main-color);
+}
+.portfolio .more {
+    background-color: var(--main-color);
+    color: white;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    padding: 10px 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+    margin: 20px auto;
+}
+/* end portfolio */
