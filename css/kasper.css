@@ -365,11 +365,13 @@ header .container nav .form i {
 }
 .desgin-container .image img {
     position: relative;
-    height: 800px;
-    top: 92px;
+    top: 230px;
+    transform: rotate(180deg);
+    filter: grayscale(3)
 }
 
-@media (max-width:1305px){
+
+@media (max-width:1020px){
     .desgin-container .image {
         display: none;
     }
