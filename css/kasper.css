@@ -730,3 +730,71 @@ header .container nav .form i {
     border-style: solid;
 }
 /* end skills */
+/* start quote */
+.quote {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);  
+    background-image: url("..\\images\\quote.jpg");
+    background-size: cover;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+.quote::before{
+    content: "";
+    background-color: rgba(0, 0, 0, 0.661);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.quote q::before {
+    font-family: 'Font Awesome\ 5 Free';
+    content: "\f10d";
+    font-weight: 800;
+    font-size: 40px;
+    padding-right: 10px;
+    position: absolute;
+    top: 65px;
+    left: -43px;
+}
+.quote q::after {
+    font-family: 'Font Awesome\ 5 Free';
+    content: "\f10e";
+    font-weight: 800;
+    font-size: 40px;
+    padding-right: 10px;
+    position: absolute;
+    right: 75px;
+    bottom: 55px;
+}
+@media (max-width:767px) {
+    .quote q::before {
+        display: none;
+    }
+    .quote q::after {
+        display: none;
+    }
+}
+
+.quote q {
+    font-size: 29px;
+    display: block;
+    position: relative;
+}
+.quote q {
+    font-size: 29px;
+}
+.quote span {
+    display: block;
+    position: relative;
+    align-items: center;
+    margin-top: 20px;
+    right: -42%;
+    border-top: 1px solid;
+    width: 50%;
+    padding-top: 9px;
+}
+
+/* end quote */
