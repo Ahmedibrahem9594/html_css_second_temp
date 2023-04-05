@@ -532,3 +532,15 @@ header .container nav .form i {
     text-transform: uppercase;
 }
 /* end video */
+/* start about */
+.about  {
+    padding-top: var(--padding-section);
+    overflow: hidden;
+    text-align: center;
+}
+.about img {
+    position: relative;
+    bottom: -250px;
+    margin-top: -250px;
+}
+/* end about */
