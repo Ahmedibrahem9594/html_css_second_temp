@@ -544,3 +544,72 @@ header .container nav .form i {
     margin-top: -250px;
 }
 /* end about */
+/* start statistics */
+.statistics {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);
+    position: relative;
+    background-image: url("..\\images\\statistics.jpg");
+    background-size: cover;
+    width: 100%;
+    text-align: center;
+}
+.statistics::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.389);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.statistics .container {
+    display: flex;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+@media (max-width:767px) {
+    .statistics .container .box {
+        flex-basis: 100%;
+    }
+}
+@media (min-width:768px) {
+    .statistics .container .box {
+        flex-basis: 50%;
+    }
+}
+@media (min-width:992px) {
+    .statistics .container .box {
+        flex-basis: 25%;
+    }
+}
+.statistics .container .box {
+    color: white;
+    z-index: 2;
+    background-color: var(--tarnsparent-color);
+}
+.statistics .container .box i {
+    width: 40px;
+    height: 40px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    font-size: 30px;
+    border-radius: 50%;
+    padding: 30px;
+}
+.statistics .container .box .number {
+    font-size: 50px;
+    font-weight: 800;
+    margin: 0 10px 20px;
+}
+.statistics .container .box p {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+
+/* end statistics */
