@@ -1066,7 +1066,7 @@ header .container nav .form i {
     color: white;
     position: relative;
     width: 100%;
-    background-position-y: -200px;
+    /* background-position-y: -200px; */
 }
 .footer::before {
     content: "";
