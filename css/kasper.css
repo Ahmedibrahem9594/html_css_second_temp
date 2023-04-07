@@ -801,12 +801,19 @@ header .container nav .form i {
     padding-top: var(--padding-section);
     padding-bottom: var(--padding-section);  
 }
-.pricing .container {
- 
+
+
+@media (min-width:992px) {
+    .pricing .container .plans{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(350px,1fr));
+    } 
 }
-.pricing .container .plans{
- display: grid;
- grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+@media (min-width:1200px) {
+    .pricing .container .plans{
+        display: grid;
+        grid-template-columns: repeat(auto-fill,minmax(250px,1fr));
+       }
 }
 
 .pricing .container .plans .plan{
@@ -815,6 +822,8 @@ header .container nav .form i {
 }
 .pricing .container .plans .plan .head{
     text-align: center;
+    background-color: #e9e8e8;
+    padding-bottom: 30px;
 }
 .pricing .container .plans .plan .head h3{
     border-top: 1px solid var(--main-color);
@@ -823,6 +832,7 @@ header .container nav .form i {
     font-weight: normal;
     text-transform: uppercase;
     padding-bottom: 20px;
+    margin-top:30px;
 }
 .pricing .container .plans .plan .head span{
     position: relative;
@@ -841,7 +851,6 @@ header .container nav .form i {
     font-size: 17px;
 }
 .pricing .container .plans .plan  ul{
-    margin-top: 23px;
     text-align: center;
     padding: 24px;
     border-top: 1px solid var(--main-color);
@@ -864,6 +873,11 @@ header .container nav .form i {
     color: white;
     padding: 12px;
     text-transform: uppercase;
+    display: block;
+    width: fit-content;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
 }
 .pricing  .contact-text {
     display: block;
@@ -887,3 +901,82 @@ header .container nav .form i {
     margin-left: auto;
 }
 /* end pricing */
+/* start subscribe */
+.subscribe {
+    padding-top: var(--padding-section);
+    padding-bottom: var(--padding-section);  
+    background-image: url("..\\images\\design.png");
+    background-size: cover;
+    color: white;
+    position: relative;
+    width: 100%;
+}
+.subscribe::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.661);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.subscribe .container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+@media (max-width:992px) {
+    .subscribe .container {
+      flex-direction: column;
+    }
+}
+.subscribe .container form {
+    width: 500px;
+    display: flex;
+    max-width: 100%;
+    position: relative;
+}
+.subscribe .container form i {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 10px;
+    font-size: 30px;
+}
+
+.subscribe .container form input[type="email"] {
+    background-color: transparent;
+    border: 1px solid white;
+    border-right: none;
+    padding: 20px 20px 20px 60px;
+    width: calc(100% - 130px);
+    caret-color: var(--main-color);
+    color: white;
+}
+.subscribe .container form input[type="submit"] {
+    background-color: var(--main-color);
+    color: white;
+    width: 130px;
+    text-transform: uppercase;
+    border: 1px solid white;
+    border-left: none;
+}
+.subscribe .container form ::placeholder {
+   color: white;
+   text-transform: uppercase;
+}
+.subscribe .container form input[type="email"]:focus,
+.subscribe .container form input[type="submit"]:focus {
+    outline: none;
+}
+.subscribe .container p {
+    margin-left: 30px;
+    line-height: 2;
+}
+@media (max-width:992px) {
+    .subscribe .container p {
+        margin-top: 30px;
+    }
+}
+/* end subscribe */
